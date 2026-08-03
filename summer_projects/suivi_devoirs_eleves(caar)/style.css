@@ -1,0 +1,144 @@
+:root {
+  --ink: #1c2333;
+  --paper: #fdfcf9;
+  --line: #d8d3c8;
+  --accent: #3a5a78;
+  --accent-soft: #eef2f5;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #e9e5db;
+  font-family: 'Georgia', 'Times New Roman', serif;
+  color: var(--ink);
+  display: flex;
+  justify-content: center;
+  padding: 32px 16px;
+}
+
+.sheet {
+  background: var(--paper);
+  width: 100%;
+  max-width: 760px;
+  border: 1px solid var(--line);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+  padding: 36px 40px 44px;
+}
+
+h1 {
+  font-size: 15px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0 0 28px;
+  padding-bottom: 16px;
+  border-bottom: 1px dashed var(--line);
+}
+
+label {
+  display: block;
+  font-size: 14px;
+  margin: 18px 0 6px;
+}
+
+input, select, textarea {
+  width: 100%;
+  font-family: inherit;
+  font-size: 15px;
+  padding: 8px 10px;
+  border: 1px solid var(--line);
+  border-bottom: 2px solid var(--accent);
+  background: #fff;
+  color: var(--ink);
+  border-radius: 2px;
+}
+
+textarea { resize: vertical; min-height: 70px; }
+select { cursor: pointer; }
+
+.row2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.dates {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+button {
+  display: block;
+  width: 100%;
+  margin-top: 28px;
+  padding: 12px;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  font-family: inherit;
+  font-size: 15px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 2px;
+}
+
+button:hover { background: #2c4459; }
+
+.message {
+  text-align: center;
+  font-size: 14px;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 2px;
+}
+
+.message.success { background: #e4f3e6; color: #2a6b32; border: 1px solid #b9dfbe; }
+.message.error { background: #fbe9e9; color: #a33; border: 1px solid #f0c3c3; }
+
+hr {
+  border: none;
+  border-top: 1px dashed var(--line);
+  margin: 32px 0 20px;
+}
+
+.list h2 {
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 0 0 14px;
+}
+
+.table-wrap { overflow-x: auto; }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  font-size: 13px;
+}
+
+th, td {
+  border: 1px solid var(--line);
+  padding: 8px 9px;
+  text-align: left;
+}
+
+th {
+  background: var(--accent);
+  color: #fff;
+  font-weight: normal;
+  white-space: nowrap;
+}
+
+tr:nth-child(even) { background: var(--accent-soft); }
+
+.empty {
+  font-size: 13px;
+  color: #888;
+  font-style: italic;
+}
